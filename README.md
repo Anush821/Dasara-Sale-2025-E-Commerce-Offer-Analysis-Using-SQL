@@ -41,3 +41,8 @@ FROM dasara_sales
 WHERE Sale_Period = 'During Dasara Sale'
 GROUP BY Platform
 ORDER BY Avg_Discount DESC;
+Insight:
+
+## 🥇 Myntra led with an average 66% discount, followed by Meesho (59%) and Flipkart (55%).
+
+IndiaMART offered minimal discounts (~18%), consistent with its B2B focus.
