@@ -96,7 +96,7 @@ GROUP BY Platform;
 
 
 **Insight:**
-Discounts jumped from an average of 15% before sale to 57% during Dasara — with Myntra showing the sharpest increase .
+Discounts jumped from an average of 55% before sale to 57% during Dasara — with Myntra showing the sharpest increase .
 
 6️⃣ Delivery & Availability Analysis
 SELECT Platform, ROUND(AVG(Delivery_Time_Days),2) AS Avg_Delivery,
@@ -105,11 +105,11 @@ FROM dasara_sales
 GROUP BY Platform;
 
 
-Insight:
+**Insight:**
 
-Amazon had the fastest delivery (3.1 days) and highest stock availability (92%).
+- Amazon had the fastest delivery (3.1 days) and highest stock availability (50%).
 
-Meesho and Myntra had slower delivery times (5–7 days).
+- IndiaMART and Myntra had slower delivery times (5–6 days).
 
 7️⃣ Top Cities by Discount Level
 SELECT City, ROUND(AVG(Discount_Percentage),2) AS Avg_Discount
@@ -120,8 +120,9 @@ ORDER BY Avg_Discount DESC
 LIMIT 10;
 
 
-Insight:
-Tier-2 cities like Indore, Jaipur, and Pune received higher discounts (65%+) than metro cities.
+**Insight:**
+
+Tier-2 cities like Ahmedabad, Pune, and Kolkata received higher discounts (40%+) than metro cities.
 ```
 
 ## 📈 Business Summary
