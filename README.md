@@ -42,11 +42,12 @@ WHERE Sale_Period = 'During Dasara Sale'
 GROUP BY Platform
 ORDER BY Avg_Discount DESC;
 
-Insight:
+**Insight:**
 
--🥇 Myntra led with an average 66% discount, followed by Meesho (59%) and Flipkart (55%).
+-🥇 Myntra led with an average 57% discount, followed by Meesho (49%) and Flipkart (43.4%).
 
--IndiaMART offered minimal discounts (~18%), consistent with its B2B focus.
+-IndiaMART offered minimal discounts (~16%), consistent with its B2B focus.
+
 2️⃣ Top 5 Brands with Highest Discounts
 SELECT Brand, ROUND(AVG(Discount_Percentage),2) AS Avg_Discount
 FROM dasara_sales
@@ -56,8 +57,9 @@ ORDER BY Avg_Discount DESC
 LIMIT 5;
 
 
-Insight:
-Fashion and beauty brands like H&M, Lakme, and Puma offered the deepest discounts (65–70%), while electronics brands maintained moderate ones (45–50%).
+**Insight:**
+
+Fashion Brands like Lakme offered the deepest discounts 46% ,while electronic brands manintained moderate ones (40–45%)
 
 3️⃣ Category-Wise Discount Analysis
 SELECT Category, ROUND(AVG(Discount_Percentage),2) AS Avg_Discount
@@ -65,10 +67,9 @@ FROM dasara_sales
 GROUP BY Category
 ORDER BY Avg_Discount DESC;
 
+** Insight:**
 
-Insight:
-
-Fashion and Beauty had the highest discount intensity (60–70%).
+Fashion and Beauty had the highest discount intensity (50–60%).
 
 Industrial/Wholesale categories had limited offers (~15%).
 
@@ -152,17 +153,21 @@ Tier-2 cities like Indore, Jaipur, and Pune received higher discounts (65%+) tha
 
 **Visualization (optional)**: Power BI / Excel Dashboard
 
-🏁 Conclusion
+## 🏁 Conclusion
 
 This SQL-based case study demonstrates how data analytics can reveal key performance insights from festive sale events.
 By analyzing discount strategies, ratings, and logistics, we can better understand how different e-commerce platforms drive customer engagement and revenue during the festive season.
 
-📂 Dataset
+## 📂 Dataset
 
 You can download the dataset used here:
-👉 Dasara_Sale_Offers_2025.csv
 
-Created by: Anusha
-Role Targeted: Data Analyst / Business Analyst
-Tools: SQL, Power BI, Excel
-Focus Area: E-Commerce, Retail Analytics, Pricing Insights
+👉 [Dasara_Sale_Offers_2025.csv](https://drive.google.com/file/d/1mTfKZsgOI5Gf9GOqGcqvxb8FiDkpH4zA/view?usp=sharing)
+
+**Created by: Anusha**
+
+**Role Targeted: Data Analyst / Business Analyst**
+
+**Tools: SQL, Power BI, Excel**
+
+**Focus Area: E-Commerce, Retail Analytics, Pricing Insights**
