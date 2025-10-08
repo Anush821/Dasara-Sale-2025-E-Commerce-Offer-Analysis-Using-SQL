@@ -69,20 +69,23 @@ ORDER BY Avg_Discount DESC;
 
 ** Insight:**
 
-Fashion and Beauty had the highest discount intensity (50–60%).
+- Fashion and Beauty had the highest discount intensity (50–60%).
 
-Industrial/Wholesale categories had limited offers (~15%).
+- Industrial/Wholesale categories had limited offers (~15%).
 
-4️⃣ Rating vs Discount Correlation
+4️⃣ Rating vs Discount Correlation check
 SELECT Platform, ROUND(AVG(Rating),2) AS Avg_Rating,
 ROUND(AVG(Discount_Percentage),2) AS Avg_Discount
 FROM dasara_sales
-GROUP BY Platform;
+WHERE Sale_Period = 'During Dasara Sale'
+GROUP BY Platform
+ORDER BY AVG_discount DESC;
 
 
-Insight:
-Platforms with moderate discounts (40–60%) such as Flipkart and Amazon recorded higher ratings (~4.4).
-Extremely high discounts correlated with slightly lower ratings (~3.9).
+**Insight:**
+
+- Platforms with moderate discounts (40–60%) such as Flipkart and Myntra recorded higher ratings (~4).
+- Extremely high discounts correlated with slightly lower ratings (~3.6).
 
 5️⃣ Before vs During Sale Comparison
 SELECT Platform,
@@ -92,8 +95,8 @@ FROM dasara_sales
 GROUP BY Platform;
 
 
-Insight:
-Discounts jumped from an average of 15% before sale to 54% during Dasara — with Myntra showing the sharpest increase (+45%).
+**Insight:**
+Discounts jumped from an average of 15% before sale to 57% during Dasara — with Myntra showing the sharpest increase .
 
 6️⃣ Delivery & Availability Analysis
 SELECT Platform, ROUND(AVG(Delivery_Time_Days),2) AS Avg_Delivery,
